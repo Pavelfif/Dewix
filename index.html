@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEWIX - сеть магазинов компьютерной техники</title>
+  <link rel="icon" href="images/logofav.svg">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <div class="wrapper"> 
+    <div class="preloader">
+      <div class="preloader__wrapper">
+        <div class="preloader__img"><img src="images/preloader.svg" alt="preloader"></div>
+        <div class="preloader__bar"></div>
+    </div>
+  </div>
+    <header class="header">
+      <a href="#" class="header__banner-link">
+        <div class="container">
+        <div href="#" class="header__banner">
+          <p>
+            Получите скидку на покупку от 5000 рублей! Обновление акций каждый день !
+          </p>  
+          <button class="header__banner-close"><svg width="25" height="25" viewBox="0 0 22 22" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.7252 7.62265C14.7252 7.52812 14.6479 7.45078 14.5533 7.45078L13.1354 7.45722L10.9998 10.0031L8.86641 7.45937L7.44629 7.45292C7.35176 7.45292 7.27441 7.52812 7.27441 7.6248C7.27441 7.66562 7.28945 7.70429 7.31523 7.73652L10.1104 11.0666L7.31523 14.3945C7.28927 14.426 7.27487 14.4654 7.27441 14.5062C7.27441 14.6008 7.35176 14.6781 7.44629 14.6781L8.86641 14.6717L10.9998 12.1258L13.1332 14.6695L14.5512 14.676C14.6457 14.676 14.723 14.6008 14.723 14.5041C14.723 14.4633 14.708 14.4246 14.6822 14.3924L11.8914 11.0644L14.6865 7.73437C14.7123 7.70429 14.7252 7.66347 14.7252 7.62265Z"/>
+            <path d="M11 1.39648C5.68477 1.39648 1.375 5.70625 1.375 11.0215C1.375 16.3367 5.68477 20.6465 11 20.6465C16.3152 20.6465 20.625 16.3367 20.625 11.0215C20.625 5.70625 16.3152 1.39648 11 1.39648ZM11 19.0137C6.58711 19.0137 3.00781 15.4344 3.00781 11.0215C3.00781 6.60859 6.58711 3.0293 11 3.0293C15.4129 3.0293 18.9922 6.60859 18.9922 11.0215C18.9922 15.4344 15.4129 19.0137 11 19.0137Z"/>
+            </svg></button>
+          </div>
+      </div>
+      </a>
+      <div class="header__middle">
+        <div class="container">
+          <div class="header__inner">
+          <a href="#" class="logo"><img src="images/logo.svg" alt="logo"></a>
+          <button class="mobile__btn"><img src="images/mobile-btn.svg" alt="mobile-btn"></button>
+          <ul class="menu__mobile-list">
+            <li class="menu__mobile-close">
+              <button class="btn__mobile-close">
+                <svg width="50" height="50" viewBox="0 0 70 70" fill="white" xmlns="http://www.w3.org/2000/svg">
+                <path d="M52.5 8.75H17.5C15.1794 8.75 12.9538 9.67187 11.3128 11.3128C9.67187 12.9538 8.75 15.1794 8.75 17.5V52.5C8.75 54.8206 9.67187 57.0462 11.3128 58.6872C12.9538 60.3281 15.1794 61.25 17.5 61.25H52.5C54.8206 61.25 57.0462 60.3281 58.6872 58.6872C60.3281 57.0462 61.25 54.8206 61.25 52.5V17.5C61.25 15.1794 60.3281 12.9538 58.6872 11.3128C57.0462 9.67187 54.8206 8.75 52.5 8.75ZM42.9042 38.7625C43.1775 39.0336 43.3945 39.3562 43.5426 39.7117C43.6907 40.0671 43.7669 40.4483 43.7669 40.8333C43.7669 41.2184 43.6907 41.5996 43.5426 41.955C43.3945 42.3104 43.1775 42.633 42.9042 42.9042C42.633 43.1775 42.3104 43.3945 41.955 43.5426C41.5996 43.6907 41.2184 43.7669 40.8333 43.7669C40.4483 43.7669 40.0671 43.6907 39.7117 43.5426C39.3562 43.3945 39.0336 43.1775 38.7625 42.9042L35 39.1125L31.2375 42.9042C30.9664 43.1775 30.6438 43.3945 30.2883 43.5426C29.9329 43.6907 29.5517 43.7669 29.1667 43.7669C28.7816 43.7669 28.4004 43.6907 28.045 43.5426C27.6896 43.3945 27.367 43.1775 27.0958 42.9042C26.8225 42.633 26.6055 42.3104 26.4574 41.955C26.3093 41.5996 26.2331 41.2184 26.2331 40.8333C26.2331 40.4483 26.3093 40.0671 26.4574 39.7117C26.6055 39.3562 26.8225 39.0336 27.0958 38.7625L30.8875 35L27.0958 31.2375C26.5466 30.6883 26.2381 29.9434 26.2381 29.1667C26.2381 28.39 26.5466 27.6451 27.0958 27.0958C27.6451 26.5466 28.39 26.2381 29.1667 26.2381C29.9434 26.2381 30.6883 26.5466 31.2375 27.0958L35 30.8875L38.7625 27.0958C39.3117 26.5466 40.0566 26.2381 40.8333 26.2381C41.61 26.2381 42.3549 26.5466 42.9042 27.0958C43.4534 27.6451 43.7619 28.39 43.7619 29.1667C43.7619 29.9434 43.4534 30.6883 42.9042 31.2375L39.1125 35L42.9042 38.7625Z"/>
+                </svg>
+              </button>
+            </li>
+            <li class="menu__mobile-item">
+              <a href="#">ВСЕ КАТЕГОРИИ</a>
+            </li>
+            <li class="menu__mobile-item">
+              <a href="#">ГЛАВНАЯ</a>
+            </li>
+            <li class="menu__mobile-item">
+              <a href="#">ОПЛАТА</a>
+            </li>
+            <li class="menu__mobile-item">
+              <a href="#">ДОСТАВКА</a>
+            </li>
+            <li class="menu__mobile-item">
+              <a href="#">КОНТАКТЫ</a>
+            </li>
+            <li class="menu__mobile-item">
+              <a href="#">Ноутбуки</a>
+            </li>
+            <li class="menu__mobile-item">
+              <a href="#">Процессоры</a>
+            </li>
+            <li class="menu__mobile-item">
+              <a href="#">Жесткие диски</a>
+            </li>
+            <li class="menu__mobile-item">
+              <a href="#">SSD Накопители</a>
+            </li>
+            <li class="menu__mobile-item">
+              <a href="#">Блоки питания</a>
+            </li>
+            <li class="menu__mobile-item">
+              <a href="#">Оперативная память</a>
+            </li>
+            <li class="menu__mobile-item">
+              <a href="#">Видео карты</a>
+            </li>
+          </ul>
+          <form class="header__form">
+            <input class="header__input" type="text" placeholder="Какой товар ищите ?">
+            <button class="btn__search"></button>
+          </form>
+          <div class="cart__inner">
+            <a href="#" class="cart"><img src="images/cart.svg" alt="cart"></a>
+            <div class="cart__item-wrapper">
+              <a href="#" class="cart__item">
+              <p class="cart__title">
+              Товаров:
+              </p>
+              <p class="cart__title">
+                1 шт.
+              </p>
+            </a>
+            <a href="#" class="cart__item">
+              <p class="cart__title">
+              Сумма:
+              </p>
+              <p class="cart__title">
+                5 000 руб.
+              </p>
+            </a>
+            </div>
+          </div>
+          </div>
+          <div class="header__plus">
+            <div class="header__plus-item">
+              <img src="images/dollar.svg" alt="dollar">
+              <p class="header__plus-subtitle">
+                ВОЗВРАТ В ТЕЧЕНИЙ 30 ДНЕЙ
+              </p>
+            </div>
+            <div class="header__plus-item">
+              <img src="images/delivery.svg" alt="delivery">
+              <p class="header__plus-subtitle">
+                БЕЗПЛАТНАЯ ДОСТАВКА
+              </p>
+            </div>
+            <div class="header__plus-item">
+              <img src="images/ticket.svg" alt="ticket">
+              <p class="header__plus-subtitle">
+                КУПОН НА 3000 РУБЛЕЙ
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="menu">
+        <div class="container">
+          <ul class="menu__list">
+            <li class="menu__list-item__all">
+              <a href="#">
+                ВСЕ КАТЕГОРИИ
+              </a>
+            </li>
+            <li class="menu__list-item">
+              <a href="#">
+                ГЛАВНАЯ
+              </a>
+            </li>
+            <li class="menu__list-item">
+              <a href="#">
+                ОПЛАТА
+              </a>
+            </li>
+            <li class="menu__list-item">
+              <a href="#">
+                ДОСТАВКА
+              </a>
+            </li>
+            <li class="menu__list-item">
+              <a href="#">
+                КОНТАКТЫ
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      
+      <section class="contnent">
+        <div class="container">
+          <div class="content__wrapper">
+           <aside class="content__aside">
+            <ul class="aside__list">
+              <li class="aside__list-item">
+                <img src="images/laptop.svg" alt="laptop">
+                <a href="#">Ноутбуки</a>
+              </li>
+              <li class="aside__list-item">
+                <img src="images/processor.svg" alt="processor">
+                <a href="#">Процессоры</a>
+              </li>
+              <li class="aside__list-item">
+                <img src="images/hard-drive.svg" alt="hard-drive">
+                <a href="#">Жесткие диски</a>
+              </li>
+              <li class="aside__list-item">
+                <img src="images/ssd-solid.svg" alt="ssd-solid">
+                <a href="#">SSD Накопители</a>
+              </li>
+              <li class="aside__list-item">
+                <img src="images/power-supply.svg" alt="ps">
+                <a href="#">Блоки питания</a>
+              </li>
+              <li class="aside__list-item">
+                <img src="images/ram.svg" alt="ram">
+                <a href="#">Оперативная память</a>
+              </li>
+              <li class="aside__list-item">
+                <img src="images/outline_ssd.svg" alt="vidoe">
+                <a href="#">Видео карты</a>
+              </li>
+            </ul>
+          </aside>
+          <div class="slider__wrapper">
+            <div class="slider__item">
+              <img src="images/slide1.jpg" alt="slide">
+            </div>
+            <div class="slider__item">
+              <img src="images/slide2.jpg" alt="slide">
+            </div>
+            <div class="slider__item">
+              <img src="images/slide1.jpg" alt="slide">
+            </div>
+            <div class="slider__item">
+              <img src="images/slide2.jpg" alt="slide">
+            </div>
+            <div class="slider__item">
+              <img src="images/slide1.jpg" alt="slide">
+            </div>
+            <div class="slider__item">
+              <img src="images/slide2.jpg" alt="slide">
+            </div>
+          </div> 
+          </div>
+          <div class="contentbox__wrapper">
+            <a href="#" class="contentbox__item">
+              <img class="contentbox__img" src="images/contentbox-1.jpg" alt="contentbox">
+              <h2 class="contentbox__title">
+                Осенние скидки в Dewix <br> не пропустите ! 
+              </h2>
+              <p class="contentbox__subtitle">
+                Скидки на все товары от 60% и ниже
+              </p>
+            </a>
+            <a href="#" class="contentbox__item">
+              <img class="contentbox__img" src="images/contentbox-2.jpg" alt="contentbox">
+              <h2 class="contentbox__title">
+                NVIDIA RTX 2080 УЖЕ <br> ДОСТУПНА У НАС !
+              </h2>
+              <p class="contentbox__subtitle">
+                Успей купить новую видеокарту <br> по оптимальной цене
+              </p>
+            </a>
+            <a href="#" class="contentbox__item">
+              <img class="contentbox__img" src="images/contentbox-3.jpg" alt="contentbox">
+              <h2 class="contentbox__title">
+                Intel i9-9900 под <br> новый сокет !
+              </h2>
+              <p class="contentbox__subtitle">
+                Ваш лучший выбор премиального <br> процессора
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="items">
+        <div class="container">
+          <h2 class="second__title">
+            Популярные товары
+          </h2>
+          <div class="items__wrapper">
+            <a href="#" class="items__box">
+              <img src="images/item1.png" alt="item">
+              <div class="items__text">
+                <p class="items__subtitle">
+                Процессор intel
+                core i7 - 6700
+              </p>
+              <p class="items__price">
+                15 900 
+              </p>
+              </div>
+            </a>
+            <a href="#" class="items__box">
+              <img src="images/item2.png" alt="item">
+              <div class="items__text">
+                <p class="items__subtitle">
+                Dell MacBook Air
+                (black laptop)
+              </p>
+              <p class="items__price">
+                45 500 
+              </p>
+              </div>
+              
+            </a>
+            <a href="#" class="items__box">
+              <img src="images/item3.png" class="img-50" alt="item">
+              <div class="items__text">
+                <p class="items__subtitle">
+                Жесткий диск - Samsung 850 SSD
+              </p>
+              <p class="items__price">
+                3 200 
+              </p>
+              </div>
+            </a>
+            <a href="#" class="items__box">
+              <img src="images/item4.png" class="img-60" alt="item">
+              <div class="items__text">
+                <p class="items__subtitle">
+                Xiaomi Mi A1 Android TV
+              </p>
+              <p class="items__price">
+                5 500 
+              </p>
+              </div>
+            </a>
+            <a href="#" class="items__box">
+              <img src="images/item5.png" alt="item">
+              <div class="items__text">
+                <p class="items__subtitle">
+                VGA -переходник
+              </p>
+              <p class="items__price">
+                500
+              </p>
+              </div>
+            </a>
+            <a href="#" class="items__box">
+              <img src="images/item1.png" alt="item">
+              <div class="items__text">
+                <p class="items__subtitle">
+                Процессор intel
+                core i7 - 6700
+              </p>
+              <p class="items__price">
+                15 900 
+              </p>
+              </div>
+            </a>
+            <a href="#" class="items__box">
+              <img src="images/item2.png" alt="item">
+              <div class="items__text">
+                <p class="items__subtitle">
+                Dell MacBook Air
+                (black laptop)
+              </p>
+              <p class="items__price">
+                45 500 
+              </p>
+              </div>
+            </a>
+            <a href="#" class="items__box">
+              <img src="images/item3.png" class="img-50"alt="item">
+              <div class="items__text">
+                <p class="items__subtitle">
+                Жесткий диск - Samsung 850 SSD
+              </p>
+              <p class="items__price">
+                3 200 
+              </p>
+              </div>
+            </a>
+            <a href="#" class="items__box">
+              <img src="images/item4.png" class="img-60" alt="item">
+              <div class="items__text">
+               <p class="items__subtitle">
+                Xiaomi Mi A1 Android TV
+              </p>
+              <p class="items__price">
+                5 500 
+              </p> 
+              </div>
+            </a>
+            <a href="#" class="items__box">
+              <img src="images/item5.png" alt="item">
+              <div class="items__text">
+               <p class="items__subtitle">
+                VGA -переходник
+              </p>
+              <p class="items__price">
+                500
+              </p> 
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <div class="banner">
+        <img src="images/banner.jpg" alt="banner">
+      </div>
+      <section class="items">
+        <div class="container">
+          <h2 class="second__title">
+            Новые товары
+          </h2>
+          <div class="items__wrapper">
+            <a href="#" class="items__box">
+              <img src="images/item1.png" alt="item">
+              <div class="items__text">
+                <p class="items__subtitle">
+                Процессор intel
+                core i7 - 6700
+              </p>
+              <p class="items__price">
+                15 900 
+              </p>
+              </div>
+            </a>
+            <a href="#" class="items__box">
+              <img src="images/item2.png" alt="item">
+              <div class="items__text">
+                <p class="items__subtitle">
+                Dell MacBook Air
+                (black laptop)
+              </p>
+              <p class="items__price">
+                45 500 
+              </p>
+              </div>
+              
+            </a>
+            <a href="#" class="items__box">
+              <img src="images/item3.png" class="img-50" alt="item">
+              <div class="items__text">
+                <p class="items__subtitle">
+                Жесткий диск - Samsung 850 SSD
+              </p>
+              <p class="items__price">
+                3 200 
+              </p>
+              </div>
+            </a>
+            <a href="#" class="items__box">
+              <img src="images/item4.png" class="img-60" alt="item">
+              <div class="items__text">
+                <p class="items__subtitle">
+                Xiaomi Mi A1 Android TV
+              </p>
+              <p class="items__price">
+                5 500 
+              </p>
+              </div>
+            </a>
+            <a href="#" class="items__box">
+              <img src="images/item5.png" alt="item">
+              <div class="items__text">
+                <p class="items__subtitle">
+                VGA -переходник
+              </p>
+              <p class="items__price">
+                500
+              </p>
+              </div>
+            </a>
+            <a href="#" class="items__box">
+              <img src="images/item1.png" alt="item">
+              <div class="items__text">
+                <p class="items__subtitle">
+                Процессор intel
+                core i7 - 6700
+              </p>
+              <p class="items__price">
+                15 900 
+              </p>
+              </div>
+            </a>
+            <a href="#" class="items__box">
+              <img src="images/item2.png" alt="item">
+              <div class="items__text">
+                <p class="items__subtitle">
+                Dell MacBook Air
+                (black laptop)
+              </p>
+              <p class="items__price">
+                45 500 
+              </p>
+              </div>
+            </a>
+            <a href="#" class="items__box">
+              <img src="images/item3.png" class="img-50"alt="item">
+              <div class="items__text">
+                <p class="items__subtitle">
+                Жесткий диск - Samsung 850 SSD
+              </p>
+              <p class="items__price">
+                3 200 
+              </p>
+              </div>
+            </a>
+            <a href="#" class="items__box">
+              <img src="images/item4.png" class="img-60" alt="item">
+              <div class="items__text">
+               <p class="items__subtitle">
+                Xiaomi Mi A1 Android TV
+              </p>
+              <p class="items__price">
+                5 500 
+              </p> 
+              </div>
+            </a>
+            <a href="#" class="items__box">
+              <img src="images/item5.png" alt="item">
+              <div class="items__text">
+               <p class="items__subtitle">
+                VGA -переходник
+              </p>
+              <p class="items__price">
+                500
+              </p> 
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="news">
+        <div class="container">
+          <h2 class="second__title">
+            Новости
+          </h2>
+          <div class="news__inner">
+            <a href="#" class="news__item">
+              <img src="images/news1.jpg" alt="news__images">
+              <div class="news__text-inner">
+               <h3 class="third__title">
+                Xiaomi Redmi - 10
+              </h3>
+              <p class="news__number">
+                15/10/2021
+              </p>
+              <p class="news__subtitle">
+                Новая модель Redmi предлагает <br> 50-мегапиксельную камеру с высоким разрешением 
+              </p> 
+              </div>
+            </a>
+            <a href="#" class="news__item">
+              <img src="images/news2.jpg" alt="news__images">
+              <div class="news__text-inner">
+               <h3 class="third__title">
+                AMD Radeon RX 6600
+              </h3>
+              <p class="news__number">
+                13/09/2021
+              </p>
+              <p class="news__subtitle">
+                AMD Radeon™ RX 6600, расширяющих серию ​видеокарт на базе революционной архитектуры AMD RDNA™ 2
+              </p> 
+              </div>
+            </a>
+            <a href="#" class="news__item">
+              <img src="images/newx3.jpg" alt="news__images">
+              <div class="news__text-inner">
+               <h3 class="third__title">
+                HUAWEI nova 8i
+              </h3>
+              <p class="news__number">
+                20/08/2021
+              </p>
+              <p class="news__subtitle">
+                HUAWEI nova 8i получил набор интеллектуальных функций для комфортного пользовательского опыта. 
+              </p> 
+              </div>
+            </a>
+            <a href="#" class="news__item">
+              <img src="images/news4.jpg" alt="news__images">
+              <div class="news__text-inner">
+               <h3 class="third__title">
+                Apple iPad mini
+              </h3>
+              <p class="news__number">
+                10/06/2021
+              </p>
+              <p class="news__subtitle">
+                Новый iPad mini. Дисплей Liquid Retina 8,3 дюйма на всю переднюю панель.1 Мощный чип A15 Bionic с системой Neural Engine.
+              </p> 
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <a href="#" class="logo"><img src="images/logo.svg" alt="logo"></a>
+          <ul class="mobile-menu__wrapper">
+            <li class="mobile__menu-item">
+              <a href="#" class="footer__list-item__title">О КОМПАНИИ</a>
+              <ul class="mobile__submenu">
+                <li class="mobile__submenu-item footer__list-item pt15">
+                  <a href="#">Корпоративные продажи</a>
+                </li>
+                <li class="mobile__submenu-item footer__list-item">
+                  <a href="#">Обратная связь</a>
+                </li>
+                <li class="mobile__submenu-item footer__list-item">
+                  <a href="#">Вакансии</a>
+                </li>
+                <li class="mobile__submenu-item footer__list-item">
+                  <a href="#">Новости</a>
+                </li>
+                <li class="mobile__submenu-item footer__list-item">
+                  <a href="#">Персональные данные</a>
+                </li>
+                <li class="mobile__submenu-item footer__list-item">
+                  <a href="#">Партнерам</a>
+                </li>
+              </ul>
+            </li>
+            <li class="mobile__menu-item">
+              <a href="#" class="footer__list-item__title">Покупателям</a>
+              <ul class="mobile__submenu">
+                <li class="mobile__submenu-item footer__list-item pt15">
+                  <a href="#">Бонусная программа</a>
+                </li>
+                <li class="mobile__submenu-item footer__list-item">
+                  <a href="#">Подарочные карты</a>
+                </li>
+                <li class="mobile__submenu-item footer__list-item">
+                  <a href="#">Проверка оплаты счёта</a>
+                </li>
+                <li class="mobile__submenu-item footer__list-item">
+                  <a href="#">Кредиты</a>
+                </li>
+                <li class="mobile__submenu-item footer__list-item">
+                  <a href="#">Доставка</a>
+                </li>
+              </ul>
+            </li>
+            <li class="mobile__menu-item">
+              <a href="#" class="footer__list-item__title">Помощь</a>
+              <ul class="mobile__submenu">
+                <li class="mobile__submenu-item footer__list-item pt15">
+                  <a href="#">Как оформить заказ</a>
+                </li>
+                <li class="mobile__submenu-item footer__list-item">
+                  <a href="#">Способы оплаты</a>
+                </li>
+                <li class="mobile__submenu-item footer__list-item">
+                  <a href="#">Обмен, возврат, гарантия</a>
+                </li>
+                <li class="mobile__submenu-item footer__list-item">
+                  <a href="#">Информация для юр. лиц</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="footer__top-info">
+            <ul class="footer__list">
+              <li class="footer__list-item__title">
+                О КОМПАНИИ
+              </li>
+              <li class="footer__list-item">
+                <a href="#">Корпоративные продажи</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#">Обратная связь</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#">Вакансии</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#">Новости</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#">Персональные данные</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#">Партнерам</a>
+              </li>
+            </ul>
+            <ul class="footer__list">
+              <li class="footer__list-item__title">
+                Покупателям
+              </li>
+              <li class="footer__list-item">
+                <a href="#">Бонусная программа</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#">Подарочные карты</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#">Проверка оплаты счёта</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#">Кредиты</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#">Доставка</a>
+              </li>
+            </ul>
+            <ul class="footer__list">
+              <li class="footer__list-item__title">
+                Помощь
+              </li>
+              <li class="footer__list-item">
+                <a href="#">Как оформить заказ</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#">Способы оплаты</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#">Обмен, возврат, гарантия</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#">Информация для юр. лиц</a>
+              </li>
+              <li class="footer__list-item">
+                <img src="images/googlepay.png" alt="pay">
+              </li>
+            </ul>
+          </div>
+          <ul class="footer__social">
+            <ul class="footer__list">
+              <li class="footer__list-item__title">
+                Оставайтесь на связи
+              </li>
+              <li class="footer__list-item">
+                <ul class="footer__social-list">
+                  <li class="footer__social-list__item">
+                    <a href="#"><svg width="30" height="30" viewBox="0 0 30 30" fill="white" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M29.5539 6.17147C28.5101 6.63397 27.3889 6.94647 26.2101 7.08772C27.4264 6.35996 28.3363 5.21455 28.7701 3.86522C27.6274 4.54396 26.3768 5.02171 25.0726 5.27772C24.1956 4.3413 23.034 3.72063 21.768 3.51206C20.5021 3.3035 19.2028 3.51871 18.0717 4.12428C16.9406 4.72986 16.0411 5.69192 15.5128 6.8611C14.9846 8.03028 14.8571 9.34116 15.1501 10.5902C12.8347 10.474 10.5697 9.87216 8.50192 8.82385C6.43416 7.77554 4.60994 6.30417 3.14764 4.50522C2.64764 5.36772 2.36014 6.36772 2.36014 7.43272C2.35958 8.39146 2.59568 9.33552 3.04748 10.1811C3.49929 11.0267 4.15284 11.7478 4.95014 12.2802C4.02548 12.2508 3.12123 12.0009 2.31264 11.5515V11.6265C2.31254 12.9711 2.77768 14.2744 3.62912 15.3152C4.48055 16.356 5.66585 17.0701 6.98389 17.3365C6.12612 17.5686 5.22681 17.6028 4.35389 17.4365C4.72576 18.5935 5.45013 19.6053 6.4256 20.3301C7.40106 21.055 8.57878 21.4567 9.79389 21.479C7.73118 23.0982 5.18375 23.9766 2.56139 23.9727C2.09686 23.9728 1.63273 23.9457 1.17139 23.8915C3.83323 25.6029 6.93181 26.5112 10.0964 26.5077C20.8089 26.5077 26.6651 17.6352 26.6651 9.94022C26.6651 9.69022 26.6589 9.43772 26.6476 9.18772C27.7868 8.36394 28.77 7.34384 29.5514 6.17522L29.5539 6.17147Z"/>
+                      </svg></a>
+                  </li>
+                  <li class="footer__social-list__item">
+                    <a href="#"><svg width="30" height="30" viewBox="0 0 30 30" fill="white" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M28.4004 7.73438C28.609 7.07344 28.4004 6.59297 27.4775 6.59297H24.409C23.635 6.59297 23.2775 7.01367 23.0689 7.46367C23.0689 7.46367 21.4904 11.3074 19.2861 13.7994C18.5713 14.5201 18.2437 14.7604 17.8564 14.7604C17.6479 14.7604 17.3795 14.5201 17.3795 13.8598V7.70332C17.3795 6.92285 17.1416 6.5625 16.4859 6.5625H11.6602C11.1832 6.5625 10.8855 6.92285 10.8855 7.2832C10.8855 8.03379 11.9877 8.21426 12.1066 10.316V14.8828C12.1066 15.8736 11.9309 16.0547 11.5406 16.0547C10.4982 16.0547 7.96641 12.1811 6.44766 7.76719C6.15234 6.89297 5.85234 6.5625 5.07773 6.5625H1.97988C1.08633 6.5625 0.9375 6.98262 0.9375 7.4332C0.9375 8.24414 1.97988 12.3275 5.79258 17.7322C8.32441 21.4236 11.9285 23.4076 15.1752 23.4076C17.1416 23.4076 17.3795 22.957 17.3795 22.2064V19.4139C17.3795 18.5133 17.5582 18.3633 18.184 18.3633C18.6305 18.3633 19.435 18.6029 21.252 20.3748C23.3367 22.4766 23.6941 23.4375 24.8561 23.4375H27.924C28.8176 23.4375 29.2348 22.9869 28.9963 22.1162C28.7285 21.2455 27.7154 19.9846 26.4047 18.4834C25.6898 17.6432 24.6176 16.7121 24.29 16.2615C23.8436 15.6609 23.9625 15.4207 24.29 14.8805C24.2602 14.8805 28.0137 9.53555 28.4004 7.73203"/>
+                      </svg>
+                      </a>
+                  </li>
+                  <li class="footer__social-list__item">
+                    <a href="#"><svg width="30" height="30" viewBox="0 0 30 30" fill="white" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15 2.5C18.3962 2.5 18.82 2.5125 20.1525 2.575C21.4837 2.6375 22.39 2.84625 23.1875 3.15625C24.0125 3.47375 24.7075 3.90375 25.4025 4.5975C26.0381 5.22237 26.5299 5.97824 26.8438 6.8125C27.1525 7.60875 27.3625 8.51625 27.425 9.8475C27.4838 11.18 27.5 11.6038 27.5 15C27.5 18.3962 27.4875 18.82 27.425 20.1525C27.3625 21.4837 27.1525 22.39 26.8438 23.1875C26.5308 24.0222 26.0389 24.7783 25.4025 25.4025C24.7775 26.0379 24.0216 26.5297 23.1875 26.8438C22.3912 27.1525 21.4837 27.3625 20.1525 27.425C18.82 27.4838 18.3962 27.5 15 27.5C11.6038 27.5 11.18 27.4875 9.8475 27.425C8.51625 27.3625 7.61 27.1525 6.8125 26.8438C5.97791 26.5306 5.22191 26.0387 4.5975 25.4025C3.96176 24.7777 3.46991 24.0218 3.15625 23.1875C2.84625 22.3912 2.6375 21.4837 2.575 20.1525C2.51625 18.82 2.5 18.3962 2.5 15C2.5 11.6038 2.5125 11.18 2.575 9.8475C2.6375 8.515 2.84625 7.61 3.15625 6.8125C3.46905 5.97772 3.961 5.22165 4.5975 4.5975C5.22209 3.96154 5.97804 3.46966 6.8125 3.15625C7.61 2.84625 8.515 2.6375 9.8475 2.575C11.18 2.51625 11.6038 2.5 15 2.5ZM15 8.75C13.3424 8.75 11.7527 9.40848 10.5806 10.5806C9.40848 11.7527 8.75 13.3424 8.75 15C8.75 16.6576 9.40848 18.2473 10.5806 19.4194C11.7527 20.5915 13.3424 21.25 15 21.25C16.6576 21.25 18.2473 20.5915 19.4194 19.4194C20.5915 18.2473 21.25 16.6576 21.25 15C21.25 13.3424 20.5915 11.7527 19.4194 10.5806C18.2473 9.40848 16.6576 8.75 15 8.75ZM23.125 8.4375C23.125 8.0231 22.9604 7.62567 22.6674 7.33265C22.3743 7.03962 21.9769 6.875 21.5625 6.875C21.1481 6.875 20.7507 7.03962 20.4576 7.33265C20.1646 7.62567 20 8.0231 20 8.4375C20 8.8519 20.1646 9.24933 20.4576 9.54235C20.7507 9.83538 21.1481 10 21.5625 10C21.9769 10 22.3743 9.83538 22.6674 9.54235C22.9604 9.24933 23.125 8.8519 23.125 8.4375ZM15 11.25C15.9946 11.25 16.9484 11.6451 17.6517 12.3483C18.3549 13.0516 18.75 14.0054 18.75 15C18.75 15.9946 18.3549 16.9484 17.6517 17.6517C16.9484 18.3549 15.9946 18.75 15 18.75C14.0054 18.75 13.0516 18.3549 12.3483 17.6517C11.6451 16.9484 11.25 15.9946 11.25 15C11.25 14.0054 11.6451 13.0516 12.3483 12.3483C13.0516 11.6451 14.0054 11.25 15 11.25Z"/>
+                      </svg>
+                      </a>
+                  </li>
+                  <li class="footer__social-list__item">
+                    <a href="#"><svg width="30" height="30" viewBox="0 0 30 30" fill="white" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21.9809 16.875L22.8143 11.446H17.6046V7.92285C17.6046 6.43785 18.3321 4.98941 20.6655 4.98941H23.0337V0.367539C23.0337 0.367539 20.8849 0.000976562 18.8299 0.000976562C14.5399 0.000976562 11.7359 2.6016 11.7359 7.30879V11.4469H6.9668V16.876H11.7359V30.001H17.6046V16.876L21.9809 16.875Z"/>
+                      </svg></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer__list-item__title">
+                Рассылка о новинках <br> и акциях :
+              </li>
+              <li class="footer__list-item">
+                <form class="footer__form">
+                  <input class="footer__input" type="text" 
+                  placeholder="Введите E-mail :">
+                  <button class="footer__btn"type="submit"></button>
+                </form>
+              </li>
+              <li class="footer__list-item">
+                <a href="tel:88201133222">8-820-11-33-222 (c 05:00 до 00:00)</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="tel:88301211666">8-830-12-11-666 (c 05:00 до 00:00)</a>
+              </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <div class="footer__bottom-text">
+            <p class="footer__subtitle">
+              © DEWIX, 2009—2021
+            </p>
+            <div class="footer__link-inner">
+              <a href="#"><p class="footer__subtitle">Политика конфиденциальности</p>
+              </a>
+              <a href="#"><p class="footer__subtitle">Публичная оферта</p></a>
+            </div>
+            
+            <p class="footer__subtitle">
+              Сделал-PavelFIF
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
